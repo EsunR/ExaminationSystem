@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="KechengUpdate.aspx.cs" Inherits="HouAdmin_KechengUpdate" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="teacher_update.aspx.cs" Inherits="HouAdmin_admin_update" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,25 +9,22 @@
 <body>
     <form id="form1" runat="server">
     <div align="center">
-        <table style="background-image: url(../igm/在线考试后台1.jpg); width: 978px; height: 616px">
+        <table style="background-image: url(../igm/在线考试后台1.jpg); width: 1010px; height: 621px">
             <tr>
-                <td colspan="3" style="height: 61px">
+                <td colspan="3" style="height: 80px">
                     &nbsp;<br />
                 </td>
-                <td colspan="1" style="height: 61px">
+                <td colspan="1" style="height: 80px">
                 </td>
             </tr>
             <tr>
-                <td style="width: 303px; height: 152px; text-align: left">
+                <td style="width: 294px; height: 152px; text-align: left">
                     &nbsp;</td>
-                <td style="vertical-align: top; width: 128px; height: 152px; text-align: left">
-                    &nbsp;
-                    <asp:TreeView ID="TreeView1" runat="server" ImageSet="Simple" NodeIndent="10" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
-                        ShowLines="True">
+                <td style="vertical-align: top; width: 312px; height: 152px; text-align: left">
+                    <asp:TreeView ID="TreeView1" runat="server" ImageSet="Faq" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
                         <ParentNodeStyle Font-Bold="False" />
-                        <HoverNodeStyle Font-Underline="True" ForeColor="#DD5555" />
-                        <SelectedNodeStyle Font-Underline="True" ForeColor="#DD5555" HorizontalPadding="0px"
-                            VerticalPadding="0px" />
+                        <HoverNodeStyle Font-Underline="True" ForeColor="Purple" />
+                        <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
                         <Nodes>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/admin.aspx" Text="管理员" Value="新建节点">
                             </asp:TreeNode>
@@ -41,32 +38,38 @@
                                 Value="管理课程信息"></asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="../Default.aspx" Text="退出系统" Value="退出系统"></asp:TreeNode>
                         </Nodes>
-                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px"
+                        <NodeStyle Font-Names="Tahoma" Font-Size="8pt" ForeColor="DarkBlue" HorizontalPadding="5px"
                             NodeSpacing="0px" VerticalPadding="0px" />
                     </asp:TreeView>
                 </td>
                 <td style="width: 729px; height: 152px">
                     <table>
                         <tr>
-                            <td align="right" style="width: 100px">
-                                <asp:Label ID="Label1" runat="server" Font-Size="9pt" Text="课程名称："></asp:Label></td>
                             <td style="width: 100px">
-                                <asp:TextBox ID="txtLessName" runat="server" Font-Size="9pt"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td align="right" style="width: 100px">
-                                <asp:Label ID="Label2" runat="server" Font-Size="9pt" Text="所属专业："></asp:Label></td>
-                            <td style="width: 100px">
-                                <asp:DropDownList ID="ddlProfession" runat="server" Font-Size="9pt" Width="132px">
-                                </asp:DropDownList></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 100px">
+                                <asp:Label ID="Label1" runat="server" Font-Size="9pt" Text="管理员名称"></asp:Label></td>
+                            <td style="width: 108px">
+                                <asp:TextBox ID="txtAdminName" runat="server" Width="129px"></asp:TextBox></td>
+                            <td align="left" style="width: 100px">
                             </td>
-                            <td style="width: 100px; text-align: center">
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:Label ID="Label2" runat="server" Font-Size="9pt" Text="管理员密码"></asp:Label></td>
+                            <td style="width: 108px">
+                                <asp:TextBox ID="txtAdminPwd" runat="server" Width="130px"></asp:TextBox></td>
+                            <td align="left" style="width: 100px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px; height: 24px">
+                            </td>
+                            <td align="center" style="width: 108px; height: 24px; text-align: center">
                                 <asp:Button ID="btnModify" runat="server" Font-Size="9pt" OnClick="Button1_Click"
                                     Text="修改" />
-                                <asp:Button ID="btnBack" runat="server" Font-Size="9pt" OnClick="Button2_Click" Text="返回" /></td>
+                                <asp:Button ID="btnBack" runat="server" CausesValidation="False" Font-Size="9pt"
+                                    OnClick="Button2_Click" Text="返回" /></td>
+                            <td align="left" colspan="1" rowspan="1" style="height: 24px">
+                                &nbsp;</td>
                         </tr>
                     </table>
                 </td>
@@ -74,9 +77,9 @@
                 </td>
             </tr>
             <tr>
-                <td style="width: 303px; height: 152px; text-align: left">
+                <td style="width: 294px; height: 152px; text-align: left">
                 </td>
-                <td style="vertical-align: top; width: 128px; height: 152px; text-align: left">
+                <td style="vertical-align: top; width: 312px; height: 152px; text-align: left">
                 </td>
                 <td style="width: 729px; height: 152px">
                 </td>

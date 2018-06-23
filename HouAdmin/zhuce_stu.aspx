@@ -29,6 +29,8 @@
                         <Nodes>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/admin.aspx" Text="管理员" Value="新建节点">
                             </asp:TreeNode>
+                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/Teacher.aspx" Text="管理教师信息" Value="新建节点">
+                            </asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/zhuce_stu.aspx" Text="管理注册学生"
                                 Value="管理注册学生"></asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/zhuanye_xinxi.aspx" Text="管理专业信息"

@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\App_Code",
     "\\HouAdmin"
   ],
-  "SelectedNode": "\\HouAdmin",
+  "SelectedNode": "\\HouAdmin\\teacher_update.aspx.cs",
   "PreviewInSolutionExplorer": false
 }

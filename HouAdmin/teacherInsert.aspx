@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminInsert.aspx.cs" Inherits="HouAdmin_AdminInsert" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="teacherInsert.aspx.cs" Inherits="HouAdmin_AdminInsert" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -48,21 +48,21 @@
                     <table>
                         <tr>
                             <td align="right" style="width: 100px">
-                                <asp:Label ID="Label1" runat="server" Font-Size="9pt" Text="管理员名称"></asp:Label></td>
+                                <asp:Label ID="Label1" runat="server" Font-Size="9pt" Text="教师姓名"></asp:Label></td>
                             <td style="width: 100px">
                                 <asp:TextBox ID="txtAdminName" runat="server" Width="130px"></asp:TextBox></td>
                             <td align="left" style="width: 27px">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtAdminName"
-                                    ErrorMessage="用户名不允许为空"></asp:RequiredFieldValidator></td>
+                                    ErrorMessage="用户名不允许为空">*</asp:RequiredFieldValidator></td>
                         </tr>
                         <tr>
                             <td align="right" style="width: 100px">
-                                <asp:Label ID="Label2" runat="server" Font-Size="9pt" Text="管理员密码"></asp:Label></td>
+                                <asp:Label ID="Label2" runat="server" Font-Size="9pt" Text="教师密码"></asp:Label></td>
                             <td style="width: 100px">
                                 <asp:TextBox ID="txtAdminPwd" runat="server" Width="130px" TextMode="Password"></asp:TextBox></td>
                             <td align="left" style="width: 27px">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtAdminPwd"
-                                    ErrorMessage="请输入密码"></asp:RequiredFieldValidator></td>
+                                    ErrorMessage="请输入密码">*</asp:RequiredFieldValidator></td>
                         </tr>
                         <tr>
                             <td style="width: 100px">
