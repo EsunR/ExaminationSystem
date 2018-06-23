@@ -30,15 +30,18 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {
-            //判断是否是管理员登录，如果是则调用方法getcom方法中的条件1
-            if (cblAdminLog.Items[0].Selected == true)
-            {
-                getcom(1);
-            }
-            //非管理员登录，调用getcom方法中条件2
-            else
+            //
+            if(DropDownList1.SelectedValue == "学生")
             {
                 getcom(2);
+            }
+            else if(DropDownList1.SelectedValue == "教师")
+            {
+                getcom(3);
+            }
+            else if(DropDownList1.SelectedValue == "管理员")
+            {
+                getcom(1);
             }
         }
     }
@@ -78,6 +81,21 @@ public partial class _Default : System.Web.UI.Page
                     Application["ID"] = txtUserName.Text;//记录登录学生ID
                     Application["PWD"] = txtPwd.Text;//记录登录学生密码
                     Page.Response.Redirect("QianUser/zaixian_kaoshi.aspx");
+                }
+                else
+                {
+                    Response.Write("<script lanuage=javascript>alert('用户名或密码有误！');location='javascript:history.go(-1)'</script>");
+                    return;
+                }
+                break;
+            case 3:
+                com.CommandText = "select count(*) from tb_Teacher where Name='" + txtUserName.Text + "' and PWD='" + txtPwd.Text + "'";
+                int count3 = Convert.ToInt32(com.ExecuteScalar());
+                if (count3 > 0)
+                {
+                    Application["Name"] = txtUserName.Text;//记录教师ID
+                    Application["PWD"] = txtPwd.Text;//记录教师密码
+                    Page.Response.Redirect("Teacher/taoti_xinxi.aspx");
                 }
                 else
                 {

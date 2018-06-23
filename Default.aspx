@@ -48,10 +48,14 @@
                         Display="Dynamic" ErrorMessage="请输入验证码！"></asp:RequiredFieldValidator></td>
             </tr>
             <tr>
-                <td align="right" style="width: 443px; height: 47px">
-                    &nbsp;<asp:CheckBoxList ID="cblAdminLog" runat="server" Font-Size="8pt">
-                        <asp:ListItem>管理员登录</asp:ListItem>
-                    </asp:CheckBoxList></td>
+                <td align="right" style="width: 443px; height: 47px;position: relative; right: 50px;">
+                    <asp:Label ID="Label5" runat="server" Text="请选择登录身份："></asp:Label>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="20px" Width="63px">
+                        <asp:ListItem Value="学生">学生</asp:ListItem>
+                        <asp:ListItem Value="教师">教师</asp:ListItem>
+                        <asp:ListItem Value="管理员">管理员</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
                 <td style="width: 123px; height: 47px">
                     <asp:Button ID="btnLogin" runat="server" Font-Size="9pt" OnClick="Button1_Click"
                         Text="登录" /><asp:Button ID="btnZhunce" runat="server" CausesValidation="False" Font-Size="9pt"
