@@ -28,35 +28,14 @@
                             VerticalPadding="0px" />
                         <Nodes>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/admin.aspx" Text="管理员" Value="新建节点">
-                                <asp:TreeNode NavigateUrl="~/HouAdmin/AdminInsert.aspx" Text="添加管理员" Value="新建节点"></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/zhuce_stu.aspx" Text="管理注册学生"
                                 Value="管理注册学生"></asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/zhuanye_xinxi.aspx" Text="管理专业信息"
-                                Value="管理专业信息">
-                                <asp:TreeNode NavigateUrl="~/HouAdmin/ZhuangyeInsert.aspx" Text="添加专业信息" Value="新建节点">
-                                </asp:TreeNode>
-                            </asp:TreeNode>
+                                Value="管理专业信息"></asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/kecheng_xinxi.aspx" Text="管理课程信息"
-                                Value="管理课程信息">
-                                <asp:TreeNode NavigateUrl="~/HouAdmin/KechengInsert.aspx" Text="添加课程" Value="新建节点"></asp:TreeNode>
-                            </asp:TreeNode>
-                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/taoti_xinxi.aspx" Text="管理套题信息"
-                                Value="管理套题信息">
-                                <asp:TreeNode NavigateUrl="~/HouAdmin/TaotiInsert.aspx" Text="添加套题" Value="新建节点"></asp:TreeNode>
-                            </asp:TreeNode>
-                            <asp:TreeNode NavigateUrl="~/HouAdmin/kaosheng_chengji.aspx" Text="管理考生成绩" Value="管理考生成绩">
-                            </asp:TreeNode>
-                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/kaoshi_timu.aspx" Text="管理考试题目"
-                                Value="管理考试题目">
-                                <asp:TreeNode NavigateUrl="~/HouAdmin/KaoshiUpdate.aspx" Text="考试题目修改" Value="新建节点">
-                                </asp:TreeNode>
-                            </asp:TreeNode>
-                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/insert_shiti.aspx" Text="添加试题"
-                                Value="添加试题">
-                                <asp:TreeNode NavigateUrl="~/HouAdmin/InsertShiTi.aspx" Text="试题详细信息" Value="新建节点"></asp:TreeNode>
-                            </asp:TreeNode>
-                            <asp:TreeNode Text="退出系统" Value="退出系统"></asp:TreeNode>
+                                Value="管理课程信息"></asp:TreeNode>
+                            <asp:TreeNode Expanded="False" NavigateUrl="../Default.aspx" Text="退出系统" Value="退出系统"></asp:TreeNode>
                         </Nodes>
                         <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px"
                             NodeSpacing="0px" VerticalPadding="0px" />
@@ -68,7 +47,7 @@
                     </asp:ScriptManager>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
-                            <table>
+                            <table style="position: relative; left: 100px;">
                                 <tr>
                                     <td style="width: 100px; height: 25px">
                                         <asp:Label ID="Label1" runat="server" Font-Size="9pt" Text="专业名称"></asp:Label></td>

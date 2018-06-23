@@ -38,21 +38,13 @@
                                 Value="管理专业信息"></asp:TreeNode>
                             <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/kecheng_xinxi.aspx" Text="管理课程信息"
                                 Value="管理课程信息"></asp:TreeNode>
-                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/taoti_xinxi.aspx" Text="管理套题信息"
-                                Value="管理套题信息"></asp:TreeNode>
-                            <asp:TreeNode NavigateUrl="~/HouAdmin/kaosheng_chengji.aspx" Text="管理考生成绩" Value="管理考生成绩">
-                            </asp:TreeNode>
-                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/kaoshi_timu.aspx" Text="管理考试题目"
-                                Value="管理考试题目"></asp:TreeNode>
-                            <asp:TreeNode Expanded="False" NavigateUrl="~/HouAdmin/insert_shiti.aspx" Text="添加试题"
-                                Value="添加试题"></asp:TreeNode>
-                            <asp:TreeNode Text="退出系统" Value="退出系统"></asp:TreeNode>
+                            <asp:TreeNode Expanded="False" NavigateUrl="../Default.aspx" Text="退出系统" Value="退出系统"></asp:TreeNode>
                         </Nodes>
                         <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px"
                             NodeSpacing="0px" VerticalPadding="0px" />
                     </asp:TreeView>
                 </td>
-                <td style="width: 729px; height: 152px">
+                <td style="width: 729px; height: 152px; position: relative; left: 200px;">
                     <asp:Label ID="Label3" runat="server" Font-Size="9pt" ForeColor="Red" Text="管理课程信息"></asp:Label>
                     <table>
                         <tr>
