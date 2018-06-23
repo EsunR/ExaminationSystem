@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "任务-db_Examination_Data",
+      "appliesTo": "App_Data/db_Examination_Data.MDF",
+      "type": "launch"
+    }
+  ]
+}
