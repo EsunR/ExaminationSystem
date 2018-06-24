@@ -88,7 +88,7 @@ public partial class HouAdmin_taoti_xinxi : System.Web.UI.Page
     protected void LinkButton10_Click(object sender, EventArgs e)
     {
         //跳转套题添加页
-        Page.Response.Redirect("TaotiInsert. aspx");
+        Page.Response.Redirect("TaotiInsert.aspx");
 
     }
 

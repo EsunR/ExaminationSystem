@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
+using System.Web.Configuration;
+using System.IO;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -115,5 +117,59 @@ public partial class _Default : System.Web.UI.Page
     protected void btnZhunce_Click(object sender, EventArgs e)
     {
         Page.Response.Redirect("zhuce.aspx");
+    }
+
+    protected void Button1_Click1(object sender, EventArgs e)
+    {
+        string strCon = WebConfigurationManager.ConnectionStrings["master"].ConnectionString;
+        SqlConnection con = new SqlConnection(strCon);
+        con.Open();
+        SqlCommand com = new SqlCommand();
+        com.Connection = con;
+        string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "\\DataBase\\ExaminationSystem.sql";
+        StreamReader sr = new StreamReader(path, System.Text.Encoding.Default);
+        string line = "";
+        string sqlstr = "";
+        while ((line = sr.ReadLine()) != null)
+        {
+            if (line == "GO")
+            {
+                try
+                {
+                    com.CommandText = sqlstr;
+                    com.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    //如果已经建立数据库就对数据库数据进行初始化操作
+                    string path_2 = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "\\DataBase\\RebuildDB.sql";
+                    StreamReader sr_2 = new StreamReader(path_2, System.Text.Encoding.Default);
+                    string line_2 = "";
+                    string sqlstr_2 = "";
+                    while ((line_2 = sr_2.ReadLine()) != null)
+                    {
+                        if (line_2 == "GO")
+                        {
+                            com.CommandText = sqlstr_2;
+                            com.ExecuteNonQuery();
+                            sqlstr_2 = "";
+                        }
+                        else
+                        {
+                            sqlstr_2 += line_2 + " ";
+                        }
+                    }
+                    break;
+                }
+                finally
+                {
+                    sqlstr = "";
+                }
+            }
+            else
+            {
+                sqlstr += line + " ";
+            }
+        }
     }
 }

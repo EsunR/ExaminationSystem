@@ -49,7 +49,7 @@
                     <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="White" BorderStyle="Double" CellPadding="4" Width="474px" Font-Size="9pt">
                         <ItemTemplate>
                             &nbsp;
-                            <asp:Label ID="Label2" runat="server" Height="19px" Width="1px" Font-Size="9pt"></asp:Label><%#DataBinder.Eval(Container.DataItem, "que_subject")%>
+                            <asp:Label ID="Label2" runat="server" Height="19px" Width="12px" Font-Size="9pt"></asp:Label><%#DataBinder.Eval(Container.DataItem, "que_subject")%>
                             <table style="width: 246px; font-size: 9pt;">
                                 <tr>
                                     <td colspan="3">

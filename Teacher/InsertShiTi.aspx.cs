@@ -33,12 +33,20 @@ public partial class HouAdmin_InsertShiTi : System.Web.UI.Page
         string sstr3 = Session["drop3"].ToString();
         if (ddlType.SelectedIndex == 0)
         {
+            /*
             dataconn.eccom("insert into tb_Questions"
                 + "(que_professionid,que_lessonid,que_taotiid,que_subject,que_type,optionA,optionB,optionC,optionD,que_answer,note)"
                 + "values('" + sstr1 + "','" + sstr2 + "','" + sstr3 + "','" + this.txtExamTitle.Text
                 + "','" + ddlType.Text + "','" + this.txtExamA.Text + "','" + this.txtExamB.Text
                 + "','" + this.txtExamC.Text + "','" + this.txtExamD.Text + "','"
                 + ddlAnswer.Text + "','" + txtInstruction.Text + "')");
+            */
+            //用存储过程插入题目
+            dataconn.eccom("exec add_questions '" + sstr1 + "','" + sstr2 + "','" + sstr3 + "','" + this.txtExamTitle.Text
+                + "','" + ddlType.Text + "','" + this.txtExamA.Text + "','" + this.txtExamB.Text
+                + "','" + this.txtExamC.Text + "','" + this.txtExamD.Text + "','"
+                + ddlAnswer.Text + "','" + txtInstruction.Text + "'");
+            
            //Response.Write("<script lanuage=javascript>alert('添加成功！');location='kaoshi_timu.aspx'</script>");
             Response.Redirect("kaoshi_timu.aspx");
         }

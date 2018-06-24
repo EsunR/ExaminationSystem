@@ -32,7 +32,7 @@ public partial class HouAdmin_AdminInsert : System.Web.UI.Page
             }
             else
             {
-                dataconn.eccom("insert into tb_Teacher(Name,PWD)values('" + txtAdminName.Text + "','" + txtAdminPwd.Text + "')");
+                dataconn.eccom("exec add_teacher '" + txtAdminName.Text + "','" + txtAdminPwd.Text + "'");
                 Response.Write("<script lanuage=javascript>alert('添加成功！');location='Teacher.aspx'</script>");
             }
         }

@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HouAdmin"
+    "\\DataBase"
   ],
-  "SelectedNode": "\\HouAdmin\\teacher_update.aspx.cs",
+  "SelectedNode": "\\DataBase\\RebuildDB.sql",
   "PreviewInSolutionExplorer": false
 }
