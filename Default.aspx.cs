@@ -26,9 +26,9 @@ public partial class _Default : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         //判断验证码是否有误
-        if (txtValidate.Text != txtValidate.Text)
+        if (txtValidate.Text != labValidate.Text)
         {
-            Response.Write("<script language=javascript>alert('验证码有误！')location='javascript:history.go(-1)'</script>");
+            Response.Write("<script language=javascript>alert('验证码有误！')</script>");
         }
         else
         {

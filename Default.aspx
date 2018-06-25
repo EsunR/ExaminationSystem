@@ -71,7 +71,7 @@
         <div style="width: 118px; margin: 20px auto; height: 22px;">
             <asp:Button ID="Button1" runat="server" Text="初始化数据库" OnClick="Button1_Click1" />
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [chengji_chaxun_view]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Examination %>" SelectCommand="SELECT * FROM [chengji_chaxun_view]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

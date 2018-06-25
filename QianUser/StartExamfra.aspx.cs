@@ -95,7 +95,7 @@ public partial class QianUser_StartExamfra : System.Web.UI.Page
                     + dd1 + " and que_taotiid=" + dd2 + " order by id desc", con);
                 DataSet myds3 = new DataSet();
                 myadapter3.Fill(myds3);
-                DataRow[] row1 = myds3.Tables[0].Select();  //获取考生选择的答案序列
+                DataRow[] row1 = myds3.Tables[0].Select();  //获取答案序列
                 //计算单选题成
                 foreach (DataRow answer1 in row1)
                 {
@@ -105,7 +105,7 @@ public partial class QianUser_StartExamfra : System.Web.UI.Page
                         RadioButtonList rbl = (RadioButtonList)(DataList1.Items[int_row1 - 1].FindControl("RadioButtonList1"));
                         if (rbl.SelectedValue == "")
                         {
-                            this.lblSel.Text = "0"; //bug:如果最后一道题不选，则导致总体分数结果为0
+                            int_row1Point += 0; //如果改题未做，该题得分则为0
                         }
                         else
                         {
@@ -135,7 +135,7 @@ public partial class QianUser_StartExamfra : System.Web.UI.Page
                         CheckBoxList cbl = (CheckBoxList)(DataList2.Items[int_row2 - 1].FindControl("CheckBoxList1"));
                         if (cbl.SelectedValue == "")
                         {
-                            lblDSel.Text = "0";
+                            int_row2Point += 0;
                         }
                         else
                         {

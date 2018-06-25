@@ -49,7 +49,8 @@
                     <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="White" BorderStyle="Double" CellPadding="4" Width="474px" Font-Size="9pt">
                         <ItemTemplate>
                             &nbsp;
-                            <asp:Label ID="Label2" runat="server" Height="19px" Width="12px" Font-Size="9pt"></asp:Label><%#DataBinder.Eval(Container.DataItem, "que_subject")%>
+                            <asp:Label ID="Label2" runat="server" Height="19px" Width="12px" Font-Size="9pt"></asp:Label>
+                            <%#DataBinder.Eval(Container.DataItem, "que_subject")%>
                             <table style="width: 246px; font-size: 9pt;">
                                 <tr>
                                     <td colspan="3">
@@ -143,16 +144,14 @@
                 </td>
             </tr>
             <tr style="color: #000000">
-                <td align="center" colspan="2" rowspan="2">
+                <td align="center" colspan="2">
                     &nbsp;<asp:Button ID="btnSubmit" runat="server" Font-Size="9pt" OnClick="btnSubmit_Click" Text="交卷"
                         Width="117px" Height="24px" />&nbsp;&nbsp; &nbsp;
                     &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button
                             ID="btnExit" runat="server" OnClick="btnExit_Click" Text="退出当前系统" Font-Size="9pt" />
                     &nbsp; &nbsp; &nbsp;&nbsp;</td>
             </tr>
-            <tr>
-            </tr>
-        </table>
+            </table>
         <br />
         <table style="width: 800px; height: 21px; margin: 0 auto;">
             <tr>
